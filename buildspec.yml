@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - echo insalling nginx
-      - sudo apt-get update
+      - sudo apt-get updat
       - sudo apt-get install nginx -y
   
   build:
@@ -15,7 +15,7 @@ phases:
   post_build:
     commands:
       - echo "Post Build Phase: Deployment complete"
-      - echo "Static HTML site is ready at /var/www/html/index.html"
+     
 artifacts:
   files:
     - /var/www/html/index.html
