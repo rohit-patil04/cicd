@@ -12,9 +12,6 @@ phases:
       - echo buil Started on 'date'
       - cp index.html /var/www/html/index.html
 
-  post_build:
-    commands:
-      - echo "Post Build Phase: Deployment complete"
      
 artifacts:
   files:
