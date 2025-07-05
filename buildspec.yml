@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing Phase: Nothing to install for static HTML"
+      - sudo apt-get update
+      - sudo apt-get install nginx -y
+  
+  build:
+    commands:
+      - echo buil Started on 'date'
+      - cp index.html /var/www/html/index.html
+
+  post_build:
+    commands:
+      - echo "Post Build Phase: Deployment complete"
+      - echo "Static HTML site is ready at /var/www/html/index.html"
+artifacts:
+  files:
+    - /var/www/html/index.html
+
